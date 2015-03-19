@@ -22,6 +22,7 @@ public class Main extends Application{
 		scene.setFill(Color.GRAY);
 		Label label = new Label("Testing jenkins");
 		root.getChildren().add(label);
+		String test;
 		primaryStage.setTitle("Jeninks Test");
 		primaryStage.setScene(scene);
 		primaryStage.show();
