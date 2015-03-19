@@ -11,6 +11,15 @@
 			<version>4.9</version>
 		</dependency>
 	</dependencies>
+	<reporting>
+		<plugins>
+			<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-checkstyle-plugin</artifactId>
+		        <version>2.14</version>
+		      </plugin>
+		</plugins>
+	</reporting>
 	<build>
 		<plugins>
 			<plugin>
@@ -50,10 +59,39 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-			</plugin>
+				  <groupId>org.apache.maven.plugins</groupId>
+				  <artifactId>maven-site-plugin</artifactId>
+				  <version>3.3</version>
+				  <configuration>
+				    <reportPlugins>
+				      <plugin>
+				        <groupId>org.apache.maven.plugins</groupId>
+				        <artifactId>maven-project-info-reports-plugin</artifactId>
+				        <version>2.2</version>
+				        <reports>
+				          <report>index</report>
+				        </reports>
+				      </plugin>  
+				      <plugin>
+				        <groupId>org.apache.maven.plugins</groupId>
+				        <artifactId>maven-checkstyle-plugin</artifactId>
+				        <version>2.6</version>
+				      </plugin>
+				      <plugin>
+				        <groupId>org.apache.maven.plugins</groupId>
+				        <artifactId>maven-pmd-plugin</artifactId>
+				        <version>2.5</version>
+				        <configuration>
+				          <linkXref>true</linkXref>
+				          <minimumTokens>100</minimumTokens>
+				          <minimumPriority>3</minimumPriority>
+				          <!-- Change minimum priority to see more or less messages -->
+				          <targetJdk>1.6</targetJdk>
+				        </configuration>
+				      </plugin>
+				    </reportPlugins>
+				  </configuration>
+				</plugin>
 		</plugins>
 	</build>
 </project>
