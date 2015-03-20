@@ -58,7 +58,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				  <groupId>org.apache.maven.plugins</groupId>
 				  <artifactId>maven-site-plugin</artifactId>
 				  <version>3.3</version>
@@ -85,13 +85,13 @@
 				          <linkXref>true</linkXref>
 				          <minimumTokens>100</minimumTokens>
 				          <minimumPriority>3</minimumPriority>
-				          <!-- Change minimum priority to see more or less messages -->
+				          Change minimum priority to see more or less messages
 				          <targetJdk>1.6</targetJdk>
 				        </configuration>
 				      </plugin>
 				    </reportPlugins>
 				  </configuration>
-				</plugin>
+				</plugin> -->
 		</plugins>
 	</build>
 </project>
