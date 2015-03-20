@@ -1,3 +1,7 @@
+package general;
+import model.Person;
+import ui.DetailsView;
+import ui.DetailsViewController;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -20,9 +24,12 @@ public class Main extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		Scene scene = new Scene(root, sceneWidth, sceneHeight, true);
 		scene.setFill(Color.GRAY);
-		Label label = new Label("Testing jenkins");
-		root.getChildren().add(label);
-		String test;
+		
+		Person person = new Person("Tester", "Test");
+		DetailsViewController dvController = new DetailsViewController();
+		DetailsView view = new DetailsView(dvController, person);
+		root.getChildren().add(view);
+		
 		primaryStage.setTitle("Jeninks Test");
 		primaryStage.setScene(scene);
 		primaryStage.show();
