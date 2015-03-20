@@ -1,18 +1,17 @@
 package general;
-import model.Person;
-import ui.DetailsView;
-import ui.DetailsViewController;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import model.Person;
+import ui.DetailsView;
+import ui.DetailsViewController;
 
 
-public class Main extends Application{
-	final Group root = new Group();
-
+public class Main extends Application {
+	private final Group root = new Group();
+	
 	private final double sceneWidth = 1024;
 	private final double sceneHeight = 768;
 	
@@ -21,7 +20,7 @@ public class Main extends Application{
 	}
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(final Stage primaryStage) throws Exception {
 		Scene scene = new Scene(root, sceneWidth, sceneHeight, true);
 		scene.setFill(Color.GRAY);
 		
