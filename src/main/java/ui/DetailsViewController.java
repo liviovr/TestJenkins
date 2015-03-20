@@ -2,7 +2,6 @@ package ui;
 
 import model.Person;
 
-
 public class DetailsViewController {
 
 	public DetailsViewController() {

@@ -1,4 +1,5 @@
 package general;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -7,7 +8,6 @@ import javafx.stage.Stage;
 import model.Person;
 import ui.DetailsView;
 import ui.DetailsViewController;
-
 
 public class Main extends Application {
 	private final Group root = new Group();

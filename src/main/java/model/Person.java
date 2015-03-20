@@ -11,8 +11,8 @@ public class Person {
 	private ObservableList<Person> contacts;
 
 	public Person(String firstName, String lastName) {
-		this.firstName= new SimpleStringProperty(firstName);
-		this.lastName= new SimpleStringProperty(lastName);
+		this.firstName = new SimpleStringProperty(firstName);
+		this.lastName = new SimpleStringProperty(lastName);
 		this.contacts = FXCollections.observableArrayList();
 	}
 
