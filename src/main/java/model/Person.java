@@ -6,9 +6,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Person {
-    private StringProperty firstName;
-    private StringProperty lastName;
-    private ObservableList<Person> contacts;
+    private final StringProperty firstName;
+    private final StringProperty lastName;
+    private final ObservableList<Person> contacts;
 
     public Person(String firstName, String lastName) {
         this.firstName = new SimpleStringProperty(firstName);
