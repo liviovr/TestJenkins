@@ -16,9 +16,9 @@ public class Person {
 		this.contacts = FXCollections.observableArrayList();
 	}
 
-	public String getFirstName() {
-		return firstName.get();
-	}
+    public String getFirstName() {
+        return firstName.get();
+    }
 
 	public void setFirstName(String firstName) {
 		this.firstName.set(firstName);
