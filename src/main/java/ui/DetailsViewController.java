@@ -8,7 +8,7 @@ public class DetailsViewController {
 
     }
 
-    public void changePersonFirstName(Person person, String firstName) {
+    public final void changePersonFirstName(Person person, String firstName) {
         person.setFirstName(firstName);
     }
 
