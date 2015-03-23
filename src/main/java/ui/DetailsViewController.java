@@ -1,6 +1,6 @@
 package ui;
 
-import model.Person;
+import model.ObservablePerson;
 
 public class DetailsViewController {
 
@@ -8,7 +8,7 @@ public class DetailsViewController {
 
     }
 
-    public final void changePersonFirstName(Person person, String firstName) {
+    public final void changePersonFirstName(ObservablePerson person, String firstName) {
         person.setFirstName(firstName);
     }
 

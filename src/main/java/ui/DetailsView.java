@@ -5,11 +5,12 @@ import javafx.collections.ListChangeListener;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import model.ObservablePerson;
 import model.Person;
 
 public class DetailsView extends VBox {
     private DetailsViewController controller;
-    private Person currentPerson;
+    private ObservablePerson currentPerson;
 
     private Label firstNameLabel;
     private Label lastNameLabel;
@@ -22,7 +23,7 @@ public class DetailsView extends VBox {
 
     public DetailsView(DetailsViewController dvController, Person person) {
         this.controller = dvController;
-        this.currentPerson = person;
+        this.currentPerson = new ObservablePerson(person);
         build();
         addListeners();
     }
@@ -65,7 +66,7 @@ public class DetailsView extends VBox {
                     firstNameValueLabel.setText(newValue);
                 });
 
-        currentPerson.getContacts().addListener(
+        currentPerson.getObservableContacts().addListener(
                 new ListChangeListener<Person>() {
 
                     @Override

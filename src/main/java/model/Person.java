@@ -1,50 +1,55 @@
 package model;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import java.util.ArrayList;
+import java.util.List;
 
+/**
+ * Person 
+ * @author livio.vanrymenant
+ *
+ */
 public class Person {
-    private final StringProperty firstName;
-    private final StringProperty lastName;
-    private final ObservableList<Person> contacts;
+    /**
+     * First name of the person
+     */
+    private String firstName;
+    /*
+     * Last name of the person
+     */
+    private String lastName;
+    private List<Person> contacts;
 
     public Person(String firstName, String lastName) {
-        this.firstName = new SimpleStringProperty(firstName);
-        this.lastName = new SimpleStringProperty(lastName);
-        this.contacts = FXCollections.observableArrayList();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.contacts = new ArrayList<Person>();
+    }
+    
+    public String getFirstName() {
+        return firstName;
     }
 
-    public final String getFirstName() {
-        return firstName.get();
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public final void setFirstName(String firstName) {
-        this.firstName.set(firstName);
+    public String getLastName() {
+        return lastName;
     }
 
-    public final String getLastName() {
-        return lastName.get();
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public final void setLastName(String lastName) {
-        this.lastName.set(lastName);
-    }
-
-    public final StringProperty getFirstNameProperty() {
-        return this.firstName;
-    }
-
-    public final void addContact(Person person) {
+    public void addContact(Person person) {
         this.contacts.add(person);
     }
-
-    public final void removeContact(Person person) {
-        this.contacts.remove(person);
+    
+    public boolean removeContact(Person person) {
+        return this.contacts.remove(person);
     }
-
-    public final ObservableList<Person> getContacts() {
+    
+    public List<Person> getContacts() {
         return this.contacts;
     }
 
